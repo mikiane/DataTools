@@ -57,5 +57,4 @@ with open(args.output_filename, 'w', newline='') as csvfile:
   for row in rows:
     writer.writerow(row)
 
-    
-#openai.api_key = "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"
+   
