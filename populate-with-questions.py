@@ -1,6 +1,7 @@
 import argparse
 import csv
 import openai
+import os
 
 # Configuration des arguments de ligne de commande
 parser = argparse.ArgumentParser()
@@ -9,7 +10,7 @@ parser.add_argument('output_filename', help='Nom du fichier CSV de sortie')
 args = parser.parse_args()
 
 # Chargement du modèle d'OpenAI
-openai.api_key = "APIKEY"
+openai.api_key = os.environ.get('API_KEY')
 model_engine = "text-davinci-003"
 
 # Lecture du fichier CSV d'entrée
