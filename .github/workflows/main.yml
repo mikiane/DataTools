@@ -1,0 +1,19 @@
+name: Mon Workflow OpenAI
+
+on: [push]
+
+env:
+  API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Vérification de la présence de la clé API
+      run: |
+        echo "La clé API est : ${{ env.API_KEY }}"
+
+    - name: Utilisation de la clé API pour accéder à l'API OpenAI
+      run: |
+        # Insérer ici le code qui utilise la clé API pour accéder à l'API OpenAI
